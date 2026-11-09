@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 675 669" role="img" aria-labelledby="title desc">
+  <title id="title">OneSiteStudios</title>
+  <desc id="desc">OneSiteStudios logo on a navy background</desc>
+  <rect width="675" height="669" fill="#0d2544"/>
+  <g transform="translate(53 178)">
+    <path fill="#2140c4" d="M23 0h49l24 42-24 42H23L0 42 23 0Z"/>
+    <path fill="#fff" d="M131 0h49l24 34-24 34h-49l-24-34 24-34Zm-24 42h49l24 34-24 34h-49l-24-34 24-34Zm-25 99h49l24 34-24 34H82l-24-34 24-34Zm-24 42h49l24 34-24 34H58l-24-34 24-34Z"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="91" font-weight="700" letter-spacing="-4">
+    <text x="275" y="263" fill="#2140c4">One</text>
+    <text x="502" y="263" fill="#2140c4">Site</text>
+    <text x="279" y="350" fill="#2140c4">S</text>
+    <text x="331" y="350" fill="#fff">tudios</text>
+  </g>
+  <circle cx="566" cy="201" r="11" fill="#2140c4"/>
+  <circle cx="488" cy="285" r="10" fill="#2140c4"/>
+</svg>
