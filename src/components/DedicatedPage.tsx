@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { ArrowRight, BriefcaseBusiness, CheckCircle2, Code2, Gift, GraduationCap, Heart, IndianRupee, Mail, Newspaper, Sparkles, Users, Wifi } from "lucide-react";
 import { Contact } from "./Contact";
+import { WaveDivider } from "./ui/WaveDivider";
 
 type DedicatedPageProps = {
   page: "solutions" | "blog" | "careers" | "refer";
@@ -116,6 +117,15 @@ const solutionSections = [
     features: ["Workflow and task automation", "API and tool integrations", "Scheduled data processing", "Notifications and approvals", "Error handling and audit trails", "Performance monitoring"],
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85",
   },
+  {
+    id: "iot",
+    number: "09",
+    title: "IoT",
+    subtitle: "Connected devices. Real-time telemetry. Intelligent hardware.",
+    description: "End-to-end IoT software and firmware solutions connecting microcontrollers, smart sensors, and edge gateways to secure cloud platforms and real-time operational dashboards.",
+    features: ["Custom microcontroller firmware (ESP32, STM32, ARM)", "Real-time MQTT, WebSockets, and telemetry streaming", "Ultra-low power sleep states and mesh networking", "Industrial protocols: Modbus, CAN Bus, and RS485", "Over-the-Air (OTA) secure firmware fleet deployments", "Enterprise cloud pipelines with AWS IoT & Azure IoT Hub"],
+    image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=1200&q=85",
+  },
 ] as const;
 
 const careerBenefits = [
@@ -135,6 +145,7 @@ const CareersPage: React.FC = () => (
       <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">Do work that moves businesses forward.</h1>
       <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-blue-100">We are building a thoughtful, curious team for ambitious digital projects. Bring your craft, your questions, and your point of view.</p>
     </section>
+    <WaveDivider fromColor="#102c70" toColor="#ffffff" />
     <section className="relative overflow-hidden bg-white px-6 py-20 md:px-8 md:py-28">
       <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(#dbe4f3_1px,transparent_1px)] [background-size:1.5rem_1.5rem]" />
       <div className="relative mx-auto max-w-6xl">
@@ -217,6 +228,7 @@ const SolutionsPage: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNa
       ))}
     </section>
 
+    <WaveDivider fromColor="#ffffff" toColor="#1d2737" />
     <section className="relative overflow-hidden bg-[#1d2737] px-6 py-24 text-center text-white md:px-8 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.2),transparent_55%)]" />
       <div className="relative">
@@ -261,6 +273,7 @@ export const DedicatedPage: React.FC<DedicatedPageProps> = ({ page, onNavigate }
         <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">{content.title}</h1>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-blue-100">{content.description}</p>
       </section>
+      <WaveDivider fromColor="#102c70" toColor="#f8fafc" />
       <section className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
         <div className="grid gap-5 md:grid-cols-3">
           {content.items.map(([title, description]) => (

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Cpu, HeartHandshake, Target, Zap } from "lucide-react";
+import { WaveDivider } from "./ui/WaveDivider";
 
 export const WhyChooseUs: React.FC = () => {
   const cards = [
@@ -43,7 +44,8 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-white py-24 md:py-32 border-t border-slate-200 overflow-hidden">
+    <section className="relative w-full bg-white pb-24 md:pb-32 overflow-hidden">
+      <WaveDivider fromColor="#000000" toColor="#ffffff" className="mb-14 md:mb-20" />
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         
         {/* Section Header */}

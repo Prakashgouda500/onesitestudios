@@ -22,6 +22,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  overflow-x: hidden;
 }
 
 body {
@@ -31,10 +32,27 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  /* safe area for notched phones */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Minimum touch target size — mobile only */
+@media (max-width: 767px) {
+  button, a, [role="button"] {
+    min-height: 44px;
+  }
+}
+
+/* Override for inline decorative elements */
+span[role], div[role="none"] {
+  min-height: unset;
+  min-width: unset;
 }
 
 .brand-gradient-section {
-  background: linear-gradient(180deg, #091540 0%, #0e2f7d 28%, #154fc0 62%, #6ab7ff 100%);
+  background: linear-gradient(0deg, #091540 0%, #0e2f7d 28%, #154fc0 62%, #6ab7ff 100%);
 }
 
 .brand-gradient-card {
@@ -100,6 +118,105 @@ body {
 
 .animate-scroll {
   animation: scroll 40s linear infinite;
+}
+
+/* Gradient shift animation for active nav pill */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.nav-pill-active {
+  background: linear-gradient(270deg, #6366f1, #3b82f6, #06b6d4, #3b82f6, #6366f1);
+  background-size: 300% 300%;
+  animation: gradient-shift 4s ease infinite;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.45);
+}
+
+
+/* Hero "DIGITAL PRODUCTS" right-to-left seamless shimmer */
+@keyframes hero-text-gradient {
+  from { background-position: 200% center; }
+  to   { background-position: -200% center; }
+}
+
+.hero-text-gradient {
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #000000 10%,
+    #1d4ed8 30%,
+    #93c5fd 50%,
+    #1d4ed8 70%,
+    #000000 90%,
+    #000000 100%
+  );
+  background-size: 200% 100%;
+  animation: hero-text-gradient 3s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Process "Build" — same shimmer on white background */
+.process-text-gradient {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 10%,
+    #1d4ed8 30%,
+    #93c5fd 50%,
+    #1d4ed8 70%,
+    #ffffff 90%,
+    #ffffff 100%
+  );
+  background-size: 200% 100%;
+  animation: hero-text-gradient 3s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* "ready" word in Services "What We Build" — blue-to-black shimmer */
+.ready-word-gradient {
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #000000 5%,
+    #1d4ed8 25%,
+    #60a5fa 50%,
+    #1d4ed8 75%,
+    #000000 95%,
+    #000000 100%
+  );
+  background-size: 200% 100%;
+  animation: hero-text-gradient 2.5s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* "Start a Project" button — animated gradient background shift */
+@keyframes btn-gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-gradient-shift {
+  background: linear-gradient(270deg, #6366f1, #2563eb, #0ea5e9, #2563eb, #6366f1);
+  background-size: 300% 300%;
+  animation: btn-gradient-shift 4s ease infinite;
+  box-shadow: 0 0 24px rgba(99, 102, 241, 0.45);
+}
+
+.btn-gradient-shift:hover {
+  box-shadow: 0 0 36px rgba(99, 102, 241, 0.65);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -80,7 +80,7 @@ export const ServicesVisual3D: React.FC = () => {
             Technology Ecosystem
           </h2>
           <h3 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Interactive System Architecture
+            Interactive System <span className="hero-text-gradient">Architecture</span>
           </h3>
           <p className="mt-4 text-sm text-zinc-400">
             Hover over a node to query the services and components connected to our tech core.

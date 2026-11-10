@@ -30,9 +30,9 @@ export const CapabilitiesBar: React.FC = () => {
           {scrollTechs.map((tech, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2 text-sm font-semibold tracking-wider text-zinc-400 transition-colors duration-300 hover:text-white"
+              className="flex items-center gap-2 whitespace-nowrap rounded-full border border-white/25 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wider text-zinc-300 transition-all duration-300 hover:border-white/60 hover:bg-white/10 hover:text-white"
             >
-              <div className="h-1.5 w-1.5 rounded-full bg-blue-500/80"></div>
+              <div className="h-1.5 w-1.5 rounded-full bg-blue-400 shrink-0"></div>
               <span>{tech}</span>
             </div>
           ))}

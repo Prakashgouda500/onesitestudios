@@ -131,6 +131,12 @@ export const siteData = {
       number: "08",
       title: "Automation",
       description: "Automate repetitive workflows and drastically improve operational efficiency."
+    },
+    {
+      id: "iot",
+      number: "09",
+      title: "IoT",
+      description: "Connected devices, smart sensor networks, real-time telemetry, and edge-to-cloud integrations."
     }
   ] as ServiceItem[],
   

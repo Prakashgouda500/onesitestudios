@@ -189,7 +189,7 @@ export const Testimonials: React.FC = () => {
             [ Client Feedback ]
           </p>
           <h2 className="mt-5 max-w-md text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
-            What Our <span className="text-blue-600">Clients</span> Say
+            What Our <span className="process-text-gradient">Clients</span> Say
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-slate-500">
             Real feedback from verified clients who trust OneSiteStudios to build and scale their digital products.

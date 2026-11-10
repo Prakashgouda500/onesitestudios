@@ -4,6 +4,7 @@ import { Html } from "@react-three/drei";
 import * as THREE from "three";
 import { siteData } from "../data/siteData";
 import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
+import { WaveDivider } from "./ui/WaveDivider";
 
 // Orbiter labels component
 const TechOrbiter: React.FC<{
@@ -30,7 +31,7 @@ const TechOrbiter: React.FC<{
           className={`whitespace-nowrap rounded-md border px-3 py-1.5 font-mono text-xs font-semibold tracking-wider transition-all duration-300 ${
             isHovered
               ? "border-blue-400 bg-blue-500/10 text-white shadow-[0_0_12px_rgba(59,130,246,0.4)] scale-110"
-              : "border-white/5 bg-zinc-950/80 text-zinc-400 hover:border-white/20 hover:text-white"
+              : "border-white/30 bg-zinc-950/80 text-zinc-400 hover:border-white/60 hover:text-white"
           }`}
         >
           {name}
@@ -131,7 +132,8 @@ export const Technologies: React.FC = () => {
   const techs = siteData.technologies;
 
   return (
-    <section className="relative w-full bg-bg-dark py-24 md:py-32 border-t border-white/5 overflow-hidden">
+    <section className="relative w-full bg-bg-dark pb-24 md:pb-32 overflow-hidden">
+      <WaveDivider fromColor="#ffffff" toColor="#000000" flip={true} className="mb-14 md:mb-20" />
       {/* Spotlight behind canvas */}
       <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 -z-10 h-[30rem] w-[30rem] rounded-full bg-blue-500/5 blur-[120px] pointer-events-none"></div>
 
@@ -144,7 +146,7 @@ export const Technologies: React.FC = () => {
               Technology Stack
             </h2>
             <h3 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-              Futuristic Engine
+              Futuristic <span className="hero-text-gradient">Engine</span>
             </h3>
             <p className="mt-6 text-sm leading-relaxed text-zinc-400">
               We leverage modern and robust software engineering frameworks to ensure page responsiveness, high lighthouse index, and reliable backend infrastructure.

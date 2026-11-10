@@ -2,12 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { siteData } from "../data/siteData";
+import { WaveDivider } from "./ui/WaveDivider";
 
 export const Projects: React.FC = () => {
   const projects = siteData.projects;
 
   return (
-    <section id="work" className="relative w-full bg-bg-darker py-24 md:py-32 border-t border-white/5">
+    <section id="work" className="relative w-full bg-bg-darker pb-24 md:pb-32">
+      <WaveDivider fromColor="#ffffff" toColor="#010101" flip={true} className="mb-14 md:mb-20" />
       <div className="absolute inset-0 bg-radial-gradient(circle_at_center,rgba(121,40,202,0.02),transparent_70%) pointer-events-none"></div>
 
       <div className="mx-auto max-w-7xl px-6 md:px-8">
@@ -18,7 +20,7 @@ export const Projects: React.FC = () => {
               Selected Work
             </h2>
             <h3 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              High-performance digital products.
+              High-performance <span className="hero-text-gradient">digital products</span>.
             </h3>
           </div>
           <p className="mt-4 md:mt-0 text-sm text-zinc-400 max-w-xs text-left">

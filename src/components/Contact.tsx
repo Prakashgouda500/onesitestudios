@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { siteData } from "../data/siteData";
 import { registerClient } from "../utils/clientReviewStore";
+import { WaveDivider } from "./ui/WaveDivider";
 
 export const Contact: React.FC = () => {
   const { phone, email, location, phoneUrl, whatsappDefaultMessage } = siteData.contact;
@@ -216,6 +217,7 @@ export const Contact: React.FC = () => {
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-blue-100 sm:text-base">So, make the decision to move forward. Let&apos;s discuss your project and bring it into focus.</p>
         </div>
       </div>
+      <WaveDivider fromColor="#102c70" toColor="#ffffff" />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-stretch">
